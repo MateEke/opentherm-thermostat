@@ -1,0 +1,3 @@
+[submodule "KiCad/my-kicad-library"]
+	path = KiCad/my-kicad-library
+	url = https://github.com/MateEke/my-kicad-library.git
