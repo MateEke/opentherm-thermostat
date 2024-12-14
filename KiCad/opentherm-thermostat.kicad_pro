@@ -59,21 +59,7 @@
         }
       ],
       "drc_exclusions": [
-        "courtyards_overlap|115000001|104095001|3d377e00-852a-44f6-b086-fe1291cbc3d0|52110a4f-e7de-45f4-b9fb-696d9b1bd04c",
-        "silk_overlap|115140000|112515000|a83cbb38-4c75-40c4-90b0-b99b6132fe77|c7c31ddc-69b0-48af-940a-fab389db5e70",
-        "silk_overlap|115380000|104475000|b7251ca4-71ea-4ba6-8436-71a588ff0f8c|9cf2ef26-b211-4355-95c6-aab5f53acda0",
-        "silk_overlap|115380000|104475000|f9b1bc04-c25e-4594-874f-f03a5ca0924d|9cf2ef26-b211-4355-95c6-aab5f53acda0",
-        "silk_overlap|115380000|108095000|a60e67a0-df03-4c87-b181-d40fe3fe64fa|1e7e4ecf-aa2f-4485-b61b-793d8efd4e35",
-        "silk_overlap|115380000|108095000|f9b1bc04-c25e-4594-874f-f03a5ca0924d|1e7e4ecf-aa2f-4485-b61b-793d8efd4e35",
-        "silk_overlap|115380000|109095000|a76472c0-73a8-40e1-95fa-7c7d61bc5f38|5dba22ac-6ab5-404b-a8e7-fda93d073b8c",
-        "silk_overlap|115380000|109095000|f9b1bc04-c25e-4594-874f-f03a5ca0924d|5dba22ac-6ab5-404b-a8e7-fda93d073b8c",
-        "silk_overlap|115380000|110395000|0b262475-264e-4dfd-9c58-5f7f224c4b1d|828f353f-bb62-4737-b0e1-50d4d8c8f756",
-        "silk_overlap|115380000|110395000|f9b1bc04-c25e-4594-874f-f03a5ca0924d|828f353f-bb62-4737-b0e1-50d4d8c8f756",
-        "silk_overlap|115380000|112515000|5c8e1f68-01db-40cc-83a5-5f104eea4885|c7c31ddc-69b0-48af-940a-fab389db5e70",
-        "silk_overlap|115380000|112515000|f9b1bc04-c25e-4594-874f-f03a5ca0924d|c7c31ddc-69b0-48af-940a-fab389db5e70",
-        "silk_overlap|115870000|104475000|d1db3f9f-a9dd-4d64-8447-27c48ae03209|b7251ca4-71ea-4ba6-8436-71a588ff0f8c",
-        "silk_overlap|115870000|108095000|a60e67a0-df03-4c87-b181-d40fe3fe64fa|d1db3f9f-a9dd-4d64-8447-27c48ae03209",
-        "silk_overlap|115870000|112515000|d1db3f9f-a9dd-4d64-8447-27c48ae03209|5c8e1f68-01db-40cc-83a5-5f104eea4885"
+        "courtyards_overlap|115000001|104095001|3d377e00-852a-44f6-b086-fe1291cbc3d0|52110a4f-e7de-45f4-b9fb-696d9b1bd04c"
       ],
       "meta": {
         "version": 2
@@ -502,7 +488,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "opentherm-thermostat-2.step",
       "svg": "",
       "vrml": ""
     },

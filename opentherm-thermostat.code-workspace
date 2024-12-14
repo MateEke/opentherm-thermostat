@@ -6,6 +6,9 @@
   ],
   "settings": {},
   "extensions": {
-    "recommendations": ["esphome.esphome-vscode"]
+    "recommendations": [
+      "esphome.esphome-vscode",
+      "leathong.openscad-language-support"
+    ]
   }
 }
