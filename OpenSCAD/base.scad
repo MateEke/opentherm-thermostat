@@ -1,6 +1,5 @@
-board_depth = 65;
-board_width = 67;
-cable_diameter = 7.3;
+include <shared.scad>
+
 standoff_coordinates = [
     [4, 4],
     [61, 4],
@@ -8,22 +7,14 @@ standoff_coordinates = [
     [9.5, 63.5]
 ];
 standoff_height = 5.7;
-wall_thickness = 1.6;
-board_clearance = 0.5;
 
-base_x = board_depth + cable_diameter + 3*wall_thickness + 2 * board_clearance;
-base_y = board_width + 2*wall_thickness + 2 * board_clearance;
-base_z = wall_thickness + 8;
-
-inner_x = base_x - 2*wall_thickness;
-inner_y = base_y - 2*wall_thickness;
-
-initial_offset = wall_thickness + board_clearance;
-
-
+color("gray")
 difference() {
-    // Base
-    translate([-(initial_offset),-(initial_offset),0]) cube([base_x, base_y, base_z]);
+    linear_extrude(height = base_z) {
+        offset(wall_thickness) {
+            translate([-board_clearance, -board_clearance]) square([inner_x, inner_y]);
+        }   
+    }
 
     // Inner coutout
     translate([-board_clearance,-board_clearance,wall_thickness]) cube([inner_x, inner_y, base_z]);
@@ -52,8 +43,12 @@ difference() {
     bottomScrew(initial_offset, wall_thickness, standoff_height, base_y);
 }
 
+translate([15-initial_offset,base_y-initial_offset, 5]) cube([5, 2, 2]);
+translate([base_x - 20 - initial_offset,base_y-initial_offset, 5]) cube([5, 2, 2]);
+
 
 % color("red") rotate(90) translate([0,-board_depth,wall_thickness + standoff_height - 3.23]) import("../KiCad/opentherm-thermostat.stl");
+
 
 module tapeCutouts(base_width, base_depth, wall_thickness, board_clearance, initial_offset) {
     heigth = 0.3;
@@ -75,7 +70,8 @@ module standoffM3(h) {
     }
 }
 
+
 module bottomScrew(initial_offset, wall_thickness, standoff_height, base_y) {
     y_offset = initial_offset - standoff_height; 
-    rotate([90, 0, 0]) translate([base_y / 2 - initial_offset - 5, wall_thickness + 2, y_offset]) cylinder(h=standoff_height, d=4);
+    rotate([90, 0, 0]) translate([base_y / 2 - initial_offset - 5, wall_thickness + 2, y_offset]) cylinder(h=10, d=4);
 }
