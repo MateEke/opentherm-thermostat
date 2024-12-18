@@ -147,6 +147,11 @@ sensor:
     name: "${heater_name} PID Heat"
     id: boiler_boiler_pid_heat
     type: HEAT
+  - platform: uptime
+    name: "Thermostat Uptime"
+  - platform: wifi_signal
+    name: "Thermostat Wi-Fi Signal"
+    update_interval: 60s
 
 # Boiler binary (True/False) sensors
 binary_sensor:
@@ -200,3 +205,15 @@ climate:
       deadband_output_averaging_samples: 15 # average the output over 15 samples within the deadband
     on_control:
       - climate.pid.reset_integral_term: boiler_boiler_pid # reset integral on target temperature change to prevent delay
+
+text_sensor:
+  - platform: wifi_info
+    ip_address:
+      name: "Thermostat IP Address"
+    ssid:
+      name: "Thermostat Wi-Fi SSID"
+    bssid:
+      name: "Thermostat Wi-Fi BSSID"
+  - platform: version
+    name: "ESPHome Version"
+    hide_timestamp: true

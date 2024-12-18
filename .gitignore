@@ -16,6 +16,7 @@ KiCad/*.tmp
 KiCad/*-save.pro
 KiCad/*-save.kicad_pcb
 KiCad/fp-info-cache
+KiCad/production
 
 # Netlist files (exported from Eeschema)
 KiCad/*.net
@@ -27,3 +28,7 @@ KiCad/*.ses
 # Exported BOM files
 KiCad/*.xml
 KiCad/*.csv
+
+
+# OpenSCAD
+OpenSCAD/*.stl
